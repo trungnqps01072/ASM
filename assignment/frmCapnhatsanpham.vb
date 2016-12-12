@@ -1,12 +1,12 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data.DataTable
-Public Class frmCapnhatsanpham
+Public Class frmCapNhatSanPham
     Dim db As New DataTable
-    Dim chuoiketnoi As String = "workstation id=gioipqps03263.mssql.somee.com;packet size=4096;user id=phamquocgioi_SQLLogin_1;pwd=qv6eguk3le;data source=gioipqps03263.mssql.somee.com;persist security info=False;initial catalog=gioipqps03263"
+    Dim chuoiketnoi As String = "workstation id=QLDienThoaiPS01072.mssql.somee.com;packet size=4096;user id=trungnqps01072_SQLLogin_1;pwd=3gun4dz3t2;data source=QLDienThoaiPS01072.mssql.somee.com;persist security info=False;initial catalog=QLDienThoaiPS01072"
 
-    Dim conn As SqlConnection = New SqlConnection(chuoiketnoi)
+    Dim conn As SqlConnection = New SqlConnection("workstation id=QLDienThoaiPS01072.mssql.somee.com;packet size=4096;user id=trungnqps01072_SQLLogin_1;pwd=3gun4dz3t2;data source=QLDienThoaiPS01072.mssql.somee.com;persist security info=False;initial catalog=QLDienThoaiPS01072")
     Private Sub btnLoad_Click(sender As Object, e As EventArgs) Handles btnLoad.Click
-        Dim connect As SqlConnection = New SqlConnection(chuoiketnoi)
+        Dim connect As SqlConnection = New SqlConnection("workstation id=QLDienThoaiPS01072.mssql.somee.com;packet size=4096;user id=trungnqps01072_SQLLogin_1;pwd=3gun4dz3t2;data source=QLDienThoaiPS01072.mssql.somee.com;persist security info=False;initial catalog=QLDienThoaiPS01072")
         connect.Open()
         Dim xem As SqlDataAdapter = New SqlDataAdapter("select SANPHAM.MASP as 'Mã sản phẩm',SANPHAM.TENSP as 'Tên sản phẩm', LOAISANPHAM.MALOAI as 'Mã Loại', LOAISANPHAM.TENLOAI as 'Tên Loại',SANPHAM.SOLUONG as 'Số lượng' from SANPHAM inner join LOAISANPHAM on SANPHAM.MASP = LOAISANPHAM.MASP where SANPHAM.MASP='" & txtMASP.Text & "'", connect)
         Try
@@ -31,10 +31,6 @@ Public Class frmCapnhatsanpham
         End Try
     End Sub
 
-    Private Sub frmCapnhatsanpham_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
     Private Sub dgvSanpham_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSanpham.CellContentClick
         Dim click As Integer = dgvSanpham.CurrentCell.RowIndex
         txtMASP.Text = dgvSanpham.Item(0, click).Value
@@ -45,7 +41,7 @@ Public Class frmCapnhatsanpham
     End Sub
     'sự kiện làm mới
     Private Sub LoadData()
-        Dim conn As SqlConnection = New SqlConnection(chuoiketnoi)
+        Dim conn As SqlConnection = New SqlConnection("workstation id=QLDienThoaiPS01072.mssql.somee.com;packet size=4096;user id=trungnqps01072_SQLLogin_1;pwd=3gun4dz3t2;data source=QLDienThoaiPS01072.mssql.somee.com;persist security info=False;initial catalog=QLDienThoaiPS01072")
         Dim load As SqlDataAdapter = New SqlDataAdapter("select SANPHAM.MASP as 'Mã sản phẩm',SANPHAM.TENSP as 'Tên sản phẩm', LOAISANPHAM.MALOAI as 'Mã Loại', LOAISANPHAM.TENLOAI as 'Tên Loại',SANPHAM.SOLUONG as 'Số lượng' from SANPHAM inner join LOAISANPHAM on SANPHAM.MASP = LOAISANPHAM.MASP", conn)
 
         conn.Open()
@@ -53,7 +49,7 @@ Public Class frmCapnhatsanpham
         dgvSanpham.DataSource = db.DefaultView
     End Sub
     Private Sub btnCapnhat_Click(sender As Object, e As EventArgs) Handles btnCapnhat.Click
-        Dim conn As SqlConnection = New SqlConnection(chuoiketnoi)
+        Dim conn As SqlConnection = New SqlConnection("workstation id=QLDienThoaiPS01072.mssql.somee.com;packet size=4096;user id=trungnqps01072_SQLLogin_1;pwd=3gun4dz3t2;data source=QLDienThoaiPS01072.mssql.somee.com;persist security info=False;initial catalog=QLDienThoaiPS01072")
         Dim updatequery As String = "update SANPHAM set MASP=@MASP, TENSP=@TENSP, SOLUONG=@SOLUONG where MASP=@MASP update LOAISANPHAM set MALOAI=@MALOAI, MASP=@MASP, TENLOAI=@TENLOAI where MASP=@MASP"
         Dim addupdate As SqlCommand = New SqlCommand(updatequery, conn)
         conn.Open()
@@ -87,10 +83,10 @@ Public Class frmCapnhatsanpham
                             txtMALOAI.Text = Nothing
                             txtTENLOAI.Text = Nothing
                             txtSOLUONG.Text = Nothing
-                            End If
                         End If
                     End If
                 End If
+            End If
         Catch ex As Exception
             MessageBox.Show("Không thành công", "Lỗi", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
@@ -138,7 +134,7 @@ Public Class frmCapnhatsanpham
     End Sub
 
     Private Sub btnThem_Click(sender As Object, e As EventArgs) Handles btnThem.Click
-        Dim conn As SqlConnection = New SqlConnection(chuoiketnoi)
+        Dim conn As SqlConnection = New SqlConnection("workstation id=QLDienThoaiPS01072.mssql.somee.com;packet size=4096;user id=trungnqps01072_SQLLogin_1;pwd=3gun4dz3t2;data source=QLDienThoaiPS01072.mssql.somee.com;persist security info=False;initial catalog=QLDienThoaiPS01072")
         Dim query As String = "insert into SANPHAM values(@MASP,@TENSP,@SOLUONG) insert into LOAISANPHAM values(@MALOAI,@MASP,@TENLOAI)"
         Dim save As SqlCommand = New SqlCommand(query, conn)
         conn.Open()

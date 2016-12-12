@@ -1,16 +1,16 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data.DataTable
-Public Class frmDieuchinhKH
+Public Class frmDieuChinhKH
     Dim db As New DataTable
-    Dim chuoiketnoi As String = "workstation id=gioipqps03263.mssql.somee.com;packet size=4096;user id=phamquocgioi_SQLLogin_1;pwd=qv6eguk3le;data source=gioipqps03263.mssql.somee.com;persist security info=False;initial catalog=gioipqps03263"
-    Dim conn As SqlConnection = New SqlConnection(chuoiketnoi)
-    Private Sub frmDieuchinhKH_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Dim chuoiketnoi As String = "workstation id=QLDienThoaiPS01072.mssql.somee.com;packet size=4096;user id=trungnqps01072_SQLLogin_1;pwd=3gun4dz3t2;data source=QLDienThoaiPS01072.mssql.somee.com;persist security info=False;initial catalog=QLDienThoaiPS01072"
+    Dim conn As SqlConnection = New SqlConnection("workstation id=QLDienThoaiPS01072.mssql.somee.com;packet size=4096;user id=trungnqps01072_SQLLogin_1;pwd=3gun4dz3t2;data source=QLDienThoaiPS01072.mssql.somee.com;persist security info=False;initial catalog=QLDienThoaiPS01072")
+    Private Sub frmDieuChinhKH_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         btnXoax.Enabled = False
     End Sub
     Private Sub btnLoad_Click(sender As Object, e As EventArgs) Handles btnLoad.Click
-        Dim connect As SqlConnection = New SqlConnection(chuoiketnoi)
+        Dim connect As SqlConnection = New SqlConnection("workstation id=QLDienThoaiPS01072.mssql.somee.com;packet size=4096;user id=trungnqps01072_SQLLogin_1;pwd=3gun4dz3t2;data source=QLDienThoaiPS01072.mssql.somee.com;persist security info=False;initial catalog=QLDienThoaiPS01072")
         connect.Open()
-        Dim xem As SqlDataAdapter = New SqlDataAdapter("select MAKH as 'Mã KH' ,TENKH as 'Tên Khách Hàng', DIACHI as 'Địa chỉ', SDT as 'SĐT', EMAIL from KHACHANG where MAKH=N'" & txtMaKH.Text & "'", connect)
+        Dim xem As SqlDataAdapter = New SqlDataAdapter("select MAKH as 'Mã KH' ,TENKH as 'Tên Khách Hàng', DIACHI as 'Địa chỉ', SDT as 'SĐT', EMAIL from KHACHHANG where MAKH=N'" & txtMaKH.Text & "'", connect)
         Try
             If txtMaKH.Text = "" Then
                 MessageBox.Show("Bạn cần nhập MAKH", "Nhập thiếu", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
@@ -45,8 +45,8 @@ Public Class frmDieuchinhKH
     End Sub
 
     Private Sub btnThem_Click(sender As Object, e As EventArgs) Handles btnThem.Click
-        Dim conn As SqlConnection = New SqlConnection(chuoiketnoi)
-        Dim query As String = "insert into KHACHANG values(@MAKH,@TENKH,@DIACHI,@SDT,@EMAIL)"
+        Dim conn As SqlConnection = New SqlConnection("workstation id=QLDienThoaiPS01072.mssql.somee.com;packet size=4096;user id=trungnqps01072_SQLLogin_1;pwd=3gun4dz3t2;data source=QLDienThoaiPS01072.mssql.somee.com;persist security info=False;initial catalog=QLDienThoaiPS01072")
+        Dim query As String = "insert into KHACHHANG values(@MAKH,@TENKH,@DIACHI,@SDT,@EMAIL)"
         Dim save As SqlCommand = New SqlCommand(query, conn)
         conn.Open()
         Try
@@ -90,7 +90,7 @@ Public Class frmDieuchinhKH
         End Try
 
         'Làm mới lại bảng sau khi lưu thành công
-        Dim refesh As SqlDataAdapter = New SqlDataAdapter("select MAKH as 'Mã KH' ,TENKH as 'Tên Khách Hàng', DIACHI as 'Địa chỉ', SDT as 'SĐT', EMAIL from KHACHANG", conn)
+        Dim refesh As SqlDataAdapter = New SqlDataAdapter("select MAKH as 'Mã KH' ,TENKH as 'Tên Khách Hàng', DIACHI as 'Địa chỉ', SDT as 'SĐT', EMAIL from KHACHHANG", conn)
         db.Clear()
         refesh.Fill(db)
         dgvKH.DataSource = db.DefaultView
@@ -98,7 +98,7 @@ Public Class frmDieuchinhKH
 
 
     Private Sub btnXoa_Click(sender As Object, e As EventArgs) Handles btnXoax.Click
-        Dim delquery As String = "delete from KHACHANG where MAKH=@MAKH"
+        Dim delquery As String = "delete from KHACHHANG where MAKH=@MAKH"
         Dim delete As SqlCommand = New SqlCommand(delquery, conn)
         Dim resulft As DialogResult = MessageBox.Show("Bạn muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         conn.Open()
@@ -133,8 +133,8 @@ Public Class frmDieuchinhKH
     End Sub
     'sự kiện làm mới
     Private Sub LoadData()
-        Dim conn As SqlConnection = New SqlConnection(chuoiketnoi)
-        Dim load As SqlDataAdapter = New SqlDataAdapter("select MAKH as 'Mã KH' ,TENKH as 'Tên Khách Hàng', DIACHI as 'Địa chỉ', SDT as 'SĐT', EMAIL from KHACHANG", conn)
+        Dim conn As SqlConnection = New SqlConnection("workstation id=QLDienThoaiPS01072.mssql.somee.com;packet size=4096;user id=trungnqps01072_SQLLogin_1;pwd=3gun4dz3t2;data source=QLDienThoaiPS01072.mssql.somee.com;persist security info=False;initial catalog=QLDienThoaiPS01072")
+        Dim load As SqlDataAdapter = New SqlDataAdapter("select MAKH as 'Mã KH' ,TENKH as 'Tên Khách Hàng', DIACHI as 'Địa chỉ', SDT as 'SĐT', EMAIL from KHACHHANG", conn)
 
         conn.Open()
         load.Fill(db)
@@ -197,7 +197,4 @@ Public Class frmDieuchinhKH
         LoadData()
     End Sub
 
-    Private Sub txtSDT_TextChanged(sender As Object, e As EventArgs) Handles txtSDT.TextChanged
-
-    End Sub
 End Class

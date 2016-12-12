@@ -1,0 +1,4 @@
+C:\Users\quoct\Google Drive\FPT Polytechnic\INF205 - Dien Toan Dam May (TN)\PS01072_INF205_AssignmentGĐ2\PS01072_INF205_Assignment\assignment\bin\Debug\assignment.exe.config
+C:\Users\quoct\Google Drive\FPT Polytechnic\INF205 - Dien Toan Dam May (TN)\PS01072_INF205_AssignmentGĐ2\PS01072_INF205_Assignment\assignment\obj\Debug\assignment.exe
+C:\Users\quoct\Google Drive\FPT Polytechnic\INF205 - Dien Toan Dam May (TN)\PS01072_INF205_AssignmentGĐ2\PS01072_INF205_Assignment\assignment\obj\Debug\assignment.xml
+C:\Users\quoct\Google Drive\FPT Polytechnic\INF205 - Dien Toan Dam May (TN)\PS01072_INF205_AssignmentGĐ2\PS01072_INF205_Assignment\assignment\obj\Debug\assignment.pdb

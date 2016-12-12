@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmXemsanpham
+Partial Class frmXemSanPham
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -82,7 +82,7 @@ Partial Class frmXemsanpham
         Me.btnDong.Text = "Đóng"
         Me.btnDong.UseVisualStyleBackColor = True
         '
-        'frmXemsanpham
+        'frmXemSanPham
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -93,8 +93,8 @@ Partial Class frmXemsanpham
         Me.Controls.Add(Me.btnXem)
         Me.Controls.Add(Me.txtMASP)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "frmXemsanpham"
-        Me.Text = "Xem sản phẩm"
+        Me.Name = "frmXemSanPham"
+        Me.Text = "Xem Sản Phẩm"
         CType(Me.dgvXemsp, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

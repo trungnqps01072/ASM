@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmDieuchinhKH
+Partial Class frmDieuChinhKH
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -164,7 +164,7 @@ Partial Class frmDieuchinhKH
         Me.btnXoax.Text = "Xóa"
         Me.btnXoax.UseVisualStyleBackColor = True
         '
-        'frmDieuchinhKH
+        'frmDieuChinhKH
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -184,8 +184,8 @@ Partial Class frmDieuchinhKH
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "frmDieuchinhKH"
-        Me.Text = "Cập nhật thông tin Khách Hàng"
+        Me.Name = "frmDieuChinhKH"
+        Me.Text = "Cập Nhật Thông Tin Khách Hàng"
         CType(Me.dgvKH, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

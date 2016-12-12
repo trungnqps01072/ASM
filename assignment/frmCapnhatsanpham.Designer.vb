@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmCapnhatsanpham
+Partial Class frmCapNhatSanPham
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -182,7 +182,7 @@ Partial Class frmCapnhatsanpham
         Me.dgvSanpham.Size = New System.Drawing.Size(570, 172)
         Me.dgvSanpham.TabIndex = 3
         '
-        'frmCapnhatsanpham
+        'frmCapNhatSanPham
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -204,8 +204,8 @@ Partial Class frmCapnhatsanpham
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "frmCapnhatsanpham"
-        Me.Text = "Quản lý sảm phẩm"
+        Me.Name = "frmCapNhatSanPham"
+        Me.Text = "Quản Lý Sản Phẩm"
         CType(Me.dgvSanpham, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

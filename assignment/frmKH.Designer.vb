@@ -94,7 +94,7 @@ Partial Class frmKH
         Me.Controls.Add(Me.txtMAKH)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmKH"
-        Me.Text = "Quản lý khách hàng"
+        Me.Text = "Quản Lý Khách Hàng"
         CType(Me.dgvXemkh, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

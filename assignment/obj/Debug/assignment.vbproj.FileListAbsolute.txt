@@ -1,0 +1,16 @@
+E:\#hocky5\#assigmem\gioi\gioi\assignment\bin\Debug\assignment.exe.config
+E:\#hocky5\#assigmem\gioi\gioi\assignment\bin\Debug\assignment.exe
+E:\#hocky5\#assigmem\gioi\gioi\assignment\bin\Debug\assignment.pdb
+E:\#hocky5\#assigmem\gioi\gioi\assignment\bin\Debug\assignment.xml
+E:\#hocky5\#assigmem\gioi\gioi\assignment\obj\Debug\assignment.frmCapnhatsanpham.resources
+E:\#hocky5\#assigmem\gioi\gioi\assignment\obj\Debug\assignment.frmDieuchinhKH.resources
+E:\#hocky5\#assigmem\gioi\gioi\assignment\obj\Debug\assignment.frmKH.resources
+E:\#hocky5\#assigmem\gioi\gioi\assignment\obj\Debug\assignment.frmLoaisanpham.resources
+E:\#hocky5\#assigmem\gioi\gioi\assignment\obj\Debug\assignment.frmMain.resources
+E:\#hocky5\#assigmem\gioi\gioi\assignment\obj\Debug\assignment.frmXemsanpham.resources
+E:\#hocky5\#assigmem\gioi\gioi\assignment\obj\Debug\assignment.Resources.resources
+E:\#hocky5\#assigmem\gioi\gioi\assignment\obj\Debug\assignment.vbproj.GenerateResource.Cache
+E:\#hocky5\#assigmem\gioi\gioi\assignment\obj\Debug\assignment.exe
+E:\#hocky5\#assigmem\gioi\gioi\assignment\obj\Debug\assignment.xml
+E:\#hocky5\#assigmem\gioi\gioi\assignment\obj\Debug\assignment.pdb
+E:\#hocky5\#assigmem\gioi\gioi\assignment\obj\Debug\assignment.Form1.resources
